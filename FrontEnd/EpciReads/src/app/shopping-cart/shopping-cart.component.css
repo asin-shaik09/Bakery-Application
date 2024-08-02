@@ -1,0 +1,84 @@
+.space{
+    margin-top: 90px;
+}
+/* Style the table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Style table header */
+th {
+    background-color: #f2f2f2;
+    color: #333;
+    font-weight: bold;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Style table rows */
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Style table data cells */
+td {
+    padding: 8px;
+}
+
+/* Style image inside table */
+img {
+    max-width: 100px;
+    height: auto;
+}
+
+/* Style buttons inside table */
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    font-weight: bolder;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Style card title inside table */
+.card-title {
+    margin: 0;
+}
+
+/* Style card text inside table */
+.card-text {
+    margin: 0;
+}
+
+/* Style table footer */
+tfoot {
+    font-weight: bold;
+}
+
+/* Style remove button */
+.remove-btn {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.remove-btn:hover {
+    background-color: #c82333;
+}
+
+
+.order-btn{
+    display: block;
+    width: 450px;
+    height: 50px;
+    margin-left: 45%;
+    margin-bottom: 50px;
+} 

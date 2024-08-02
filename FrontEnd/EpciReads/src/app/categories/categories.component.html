@@ -1,0 +1,60 @@
+
+<!-- Categories -->
+<!-- 
+<div class="outer1">
+<div class="container">
+    <div class="row"> 
+        <div class="col-md-3" *ngFor="let product of products">
+            <div class="card" style="width:250px; margin: 5px;">        
+                <img class="card-img-top" [src]="product.imgsrc" alt="Card image" style="height:50%; width:60%; margin-top: 5px;">
+                <div class="card-body">
+                    <h4 class="card-title">{{product.name}}</h4>
+                    <p class="card-text">{{product.description}}</p>
+                    <p class="card-text">Price: ₹{{product.price}}/-</p>
+                    <p align="right">
+                        <button class="btn btn-primary" (click)="addToCart(product)">AddToCart</button>
+                    </p>
+                </div>
+            </div>  
+        </div>   
+  </div>
+</div>
+</div> -->
+<!-- <div class="outer1"> -->
+<body>
+<div class="cat" style="margin-top: 50px; margin-bottom: 100px ; margin-left: 50px; ">
+        <button class="dropdown">
+            <a *ngIf="!adminService.adminLoginStatus ||  adminService.adminLoginStatus " class="dropbtn" style="text-decoration: none;">Categories</a>
+            <div class="dropdown-content">
+                <a (click)="fetchCatetory('Drama')">Drama</a>
+                <a (click)="fetchCatetory('Thriller')">Thriller</a>
+                <a (click)="fetchCatetory('Romance')">Romance</a>
+                <a (click)="fetchCatetory('Spiritual')">Spiritual</a>
+            </div>
+        </button>
+        </div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6" *ngFor="let product of products; let i = index;">
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img class="card-img-top" [src]="product.imgsrc" alt="Card image">
+                        <div class="card-footer">
+                            <button class="btn btn-primary"  (click)="addToCart(product)">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title-dark "><b>{{ product.name }}</b></h5>
+                            <p class="card-text">{{ product.description }}</p>
+                            <p class="card-text-dark "><b>Price: ₹{{ product.price }}/-</b></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<!-- </div> -->

@@ -1,0 +1,73 @@
+html{
+  height: 100%;
+}
+body{
+  position: relative;
+  margin: 0;
+  min-height: 100%;
+  padding-bottom: 6.74rem;
+  background-color: white;
+  
+}
+
+  
+.container-fluid{
+  margin-top: 70px;
+}
+
+/* Style for carousel container */
+.carousel {
+  margin-top: 100px;
+    width: 100%; /* Make carousel full width */
+    overflow: hidden; /* Hide overflowing content */
+    height: auto;
+}
+  
+/* Style for individual carousel slides */
+.carousel-item {
+  display: none; /* Hide all slides by default */
+  position: relative;
+  width: 100%;
+}
+
+.carousel-item img {
+  width: 100%; /* Make images fill the slide */
+  height: 700px; /* Maintain aspect ratio */
+}
+
+.carousel-item.active {
+  display: block; /* Display active slide */
+}
+
+
+
+
+
+
+.best-deals ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: center; /* Center the list items horizontally */
+}
+
+.best-deals li {
+  display: inline-block; /* Change from 'block' to 'inline-block' */
+  text-align: center;
+  margin-right: 20px; /* Adjust spacing between images */
+}
+
+.best-deals li:last-child {
+  margin-right: 0; /* Remove margin from last item */
+}
+
+.best-deals li img {
+  display: block;
+  margin: 0 auto; /* Center the image */
+  width: 100%;
+  max-width: 340px; /* Adjust as needed */
+}
+.best-deals img:hover {
+  transform: scale(1.1); /* Increase the size of the image on hover */
+  transition: transform 0.3s ease; /* Add a smooth transition effect */
+  cursor: pointer; /* Change cursor to indicate interactivity */
+}  

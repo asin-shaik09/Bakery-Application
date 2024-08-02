@@ -1,0 +1,40 @@
+<!-- <head>
+    <link rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" 
+    integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" 
+    crossorigin="anonymous">
+</head> -->
+
+<body>
+  <div class='login-form'>
+    <div class='inner-form'>
+      <form #loginForm="ngForm" (ngSubmit)="loginSubmit(loginForm.value)" novalidate>
+        <div class='formGroup'>
+          <label>Email:</label>
+          <input type="text" class="form-control" name="emailId" #emailId="ngModel" ngModel required minlength="2"
+            maxlength="50" />
+        </div>
+        <div class="warning">
+          <p *ngIf="emailId.errors?.['required'] && emailId.touched">Please provide the Email-Id</p>
+          <p *ngIf="emailId.errors?.['minlength'] && emailId.touched">Please provide atleast 2 characters for Email-Id
+          </p>
+        </div>
+        <div class='formGroup'>
+          <label>Password:</label>
+          <input type="password" class="form-control" name="password" #password="ngModel" ngModel required
+            minlength="2" />
+        </div>
+        <div class="warning">
+          <p *ngIf="password.errors?.['required'] && password.touched">Please provide the Password</p>
+          <p *ngIf="password.errors?.['minlength'] && password.touched">Please provide atleast 2 characters for Password
+          </p>
+        </div>
+        <div class='formGroup'>
+          <button [disabled]="!loginForm.value">Login</button> <span>New User? <a
+              routerLink="//register">SignUp</a></span>
+          <a class="forgot" routerLink="//forgotPassword">Forgot Password?</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>

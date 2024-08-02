@@ -1,0 +1,37 @@
+<p>showcustomerbyid works!</p>
+
+
+<br/>
+<br/>
+
+<div class="container-1">
+    <label for="">Enter Customer-Id: <input type="text" name="cId" [(ngModel)]="cId"></label>
+    <button (click)="getCustomer()">get Customer</button>
+</div>
+<br/>
+<br/>
+ 
+<div *ngIf="customer" class="container">
+    <table class="table table-bordered table-hover table-sm">
+        <thead>
+            <tr align="center"> 
+                <th class="bg-info text-white">Customer ID</th>
+                <th class="bg-info text-white">Customer Name</th>
+                <th class="bg-info text-white">Email Id</th>
+                <th class="bg-info text-white">Mobile</th>
+            </tr>
+        </thead>
+    
+        <tbody>
+            <tr>
+                <td align="center">{{customer.cId}} </td>
+                <td align="left">{{customer.fullName | uppercase }}</td>
+                <td align="center">{{customer.emailId}}</td>
+                <td align="center">{{customer.mobile}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div *ngIf="!customer" class="container">
+    <h4 class="text-danger"> Customer Record Not Found!!!</h4>
+</div>

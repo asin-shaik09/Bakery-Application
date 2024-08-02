@@ -1,0 +1,26 @@
+<div>
+    <div class="container">
+        <table class="table table-bordered table-hover table-striped table-sm">
+            <thead>
+                <tr align="center">
+                    <th class="bg-info text-white">Customer ID</th>
+                    <th class="bg-info text-white">Customer Name</th>
+                    <th class="bg-info text-white">Email Id</th>
+                    <th class="bg-info text-white">Mobile</th>
+                    <!-- <th colspan="2" class="bg-info text-white">Actions</th> -->
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let cust of customers">
+                    <td align="center">{{cust.cId}} </td>
+                    <td align="left">{{cust.fullName | uppercase }}</td>
+                    <td align="center">{{cust.emailId}}</td>
+                    <td align="center">{{cust.mobile}}</td>
+                    <!-- <td align="center"> <button class="glyphicon glyphicon-pencil"></button></td>
+                    <td align="center"> <button class="glyphicon glyphicon-trash"></button></td> -->
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+</div>
