@@ -55,9 +55,5 @@ public class CartController {
         return ResponseEntity.ok().build();
     }
     
-    @GetMapping("createTransaction/{amount}")
-    public void createTransaction(@PathVariable(name = "amount") Double amount){
-    	
-    }
-
+   
 }

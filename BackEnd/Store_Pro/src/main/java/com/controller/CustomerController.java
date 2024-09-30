@@ -31,7 +31,7 @@ public class CustomerController {
 	}
 	
 	@GetMapping("getCustomerById/{cId}")
-	public Customer getCustomerById(@PathVariable("cId") int cId){
+	public Customer getCustomerById(@PathVariable("cId") Integer cId){
 		return customerDao.getCustomerById(cId);
 	}
 	

@@ -19,7 +19,7 @@ public class EmailUtil {
 	
 	public void sendOtpEmail(String email, String name, String otp) throws MessagingException {
 		SimpleMailMessage message = new SimpleMailMessage();
-		message.setFrom("sheshank920@gmail.com");
+		message.setFrom("sharathchandrika0512@gmail.com");
 		message.setTo(email);
 		message.setSubject("OTP for Reset the Password");
 		message.setText("Dear" + name + 
@@ -31,7 +31,7 @@ public class EmailUtil {
 	
 	public void sendEmail(String email, String subject, String body) throws MessagingException {
 		SimpleMailMessage message = new SimpleMailMessage();
-		message.setFrom("sheshank920@gmail.com");
+		message.setFrom("sharathchandrika0512@gmail.com");
 		message.setTo(email);
 		message.setSubject(subject);
 		message.setText(body);

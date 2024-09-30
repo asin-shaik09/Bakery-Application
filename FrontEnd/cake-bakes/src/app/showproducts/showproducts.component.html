@@ -1,0 +1,51 @@
+<body>
+<div class="container-1">
+    <form #category="ngForm" (ngSubmit)="getProductByCategory(category.value.category)">
+        <select name="category" ngModel>
+            <option value="" selected>Select Category</option>
+            <option value="cakes"  >cakes</option>
+            <option value="Muffins">cup cakes</option>
+            <option value="Breads">Breads</option>
+            <option value="Chocolates">Chocolates</option>
+            <option value="pastries"  >pastries</option>
+            <option value="cookies">cookies</option>
+            <option value="Macroons">Macroons</option>
+        </select>
+        <button>Submit</button>
+    </form>
+</div>
+
+
+<div class="outer1">
+    <div class="container">
+        <table class="table table-bordered table-hover table-striped">
+            <thead>
+                <tr style="width:100%">
+                    <th style="width:15%" align="center">Image</th>
+                    <th style="width:45%">Description</th>
+                    <th style="width:10%">Name</th>
+                    <th style="width:10%">Price</th>
+                    <th style="width:10%">Quantity</th>
+                    <th colspan="2" style="width:10%">Actions</th>
+                    <th style="width:10%">Author</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let product of products;">
+                    <td><img class="card-img-top" [src]="product.imgsrc" alt="Card image" [(ngModel)]="products.imgsrc"></td>
+                    <td><textarea name="description" cols="50" rows="5" [(ngModel)]="product.description"></textarea>
+                    </td>
+                    <td>
+                        <h5><b>{{ product.name }}</b></h5>
+                    </td>
+                    <td><input cols="5" type="number" name="price" [(ngModel)]="product.price"></td>
+                    <td><input type="number" name="quantity" [(ngModel)]="product.quantity"></td>
+                    <td><input type="text" name="author" [(ngModel)]="product.author"></td>
+                    <td><button (click)="editProduct(product)">Edit</button></td>
+                    <td><button (click)="deleteProduct(product.pId)">Delete</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>

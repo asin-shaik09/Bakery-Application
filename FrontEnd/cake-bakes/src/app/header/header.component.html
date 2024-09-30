@@ -1,0 +1,48 @@
+<nav class="navbar bg-body-tertiary">
+  <div class="header">
+    <div class="header-1">
+      <div class="nav-part-1" routerLink="">
+        <div>
+          <img class="logo"
+            src="https://png.pngtree.com/png-clipart/20230301/ourmid/pngtree-bakery-logo-baker-illustration-png-image_6625246.png"
+            alt="">
+        </div>
+        <div class="nav-Brand">Cake Bakes</div>
+      </div>
+      <form class="nav-part-2" #product="ngForm" (ngSubmit)="search(product.value)">
+        <input class="me-2 search-input" ngModel name="name" type="search" placeholder="Search" aria-label="Search">
+        <button class="search-button">Search</button>
+      </form>
+      <ul class="pout">
+        <li><a href="" class="product" id="home" routerLink="">Home</a></li>
+        <li class="product" *ngIf="service.loginStatus || adminService.adminLoginStatus">
+          <a routerLink="products">Items</a>
+        </li>
+      </ul>
+      <div class="nav-part-3">
+        <a *ngIf="!service.loginStatus && !adminService.adminLoginStatus" class="login" routerLink="login">Login</a>
+        <a *ngIf="service.loginStatus" class="login" routerLink="logout">Logout</a>
+        <a *ngIf="adminService.adminLoginStatus" class="login" routerLink="logout">Logout</a>
+        <a *ngIf="service.loginStatus || adminService.adminLoginStatus" class="cart btn" routerLink="cart">Cart</a>
+      </div>
+    </div>
+
+    <div *ngIf="adminService.adminLoginStatus" class="header-2">
+      <nav class="navbar">
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <img class="menu-icon"
+            src="https://cdn-icons-png.freepik.com/256/4204/4204600.png?ga=GA1.1.388368384.1702624134&" alt="">
+        </label>
+        <ul class="pout">
+          <li>
+            <a routerLink="addproducts">Add Items</a>
+            <a routerLink="showproducts">Show Items</a>
+            <a routerLink="showallcustomers">Show All Customers</a>
+            <a routerLink="showcustomerbyid">Show Customers By Id</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</nav>

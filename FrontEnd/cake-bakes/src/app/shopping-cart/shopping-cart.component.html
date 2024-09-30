@@ -1,0 +1,57 @@
+<p class="space"></p>
+
+<div class="container">
+    <table>
+        <tr>
+            <th>Image</th>
+            <th>Description</th>
+            <th>Quatity</th>
+            <th>Price</th>
+            <th>Action</th>
+        </tr>
+        <tr *ngFor="let item of cartItems">
+            <td>
+                <img [src]="item.imgSrc" alt="image">
+            </td>
+            <td>
+                <h4 class="card-title">{{ item.name }}</h4>
+            </td>
+           
+            <td>
+                <p class="action"><button (click)="decrementQuantity(item)">-</button> &nbsp; {{ item.quantity }} &nbsp; <button (click)="incrementQuantity(item)">+</button></p>
+            </td>
+            <td>
+                <p class="card-text">₹{{ item.price }}/-</p>
+            </td>
+            <td>
+                <button class="remove-btn" (click)="removeFromCart(item.cartId)">Remove</button>
+            </td>
+        </tr>
+        <tr>
+            <div *ngIf="cartItems.length === 0">
+                <p>Your cart is empty.</p>
+            </div>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Price : </td>
+            <td>₹ {{cartValue}}/- </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Delivery Charges : </td>
+            <td>₹ {{deliveryCharges}}/-</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td><h5>Total Amount : </h5></td>   
+            <td><h5>₹ {{totalCartValue}}/-</h5></td>
+        </tr>
+    </table>
+    <div>
+        <button class="order-btn" (click)="placeOrder()">Place Order</button>
+    </div>
+</div>

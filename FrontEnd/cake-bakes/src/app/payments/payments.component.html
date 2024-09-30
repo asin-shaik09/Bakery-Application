@@ -1,0 +1,11 @@
+<!-- payments.component.html -->
+<body>
+    <div *ngIf="showSuccessMessage" class="success-message">
+        <h1>Thank you for your order!</h1>
+        <p>Your order will be processed soon.</p>
+      </div>
+      
+      <div *ngIf="!showSuccessMessage" class="container">
+        <div id="paypal-button-container"></div>
+      </div>
+    </body>

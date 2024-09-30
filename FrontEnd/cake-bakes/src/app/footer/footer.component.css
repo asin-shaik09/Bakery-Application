@@ -1,0 +1,124 @@
+.footer {
+  background-color: #fff8e1; /* Light cream background */
+  padding: 40px 20px;
+  color: #5b3a29; /* Dark chocolate text color */
+  font-family: 'Arial', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background-image: url('https://example.com/your-background-image.jpg'); /* Replace with your desired background */
+  background-size: cover;
+  opacity: 0.1;
+  z-index: 1;
+}
+
+.footer-columns {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  z-index: 2; /* Ensure content is above background */
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+  margin: 15px;
+  position: relative;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9); /* White with slight transparency */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.footer-column:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.footer-column h4 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #d88f4e; /* Warm bakery color */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer-column ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-column li {
+  margin: 8px 0;
+}
+
+.footer-column a {
+  text-decoration: none;
+  color: #5b3a29; /* Dark chocolate */
+  transition: color 0.3s;
+}
+
+.footer-column a:hover {
+  color: #d88f4e; /* Match hover color */
+  text-decoration: underline;
+}
+
+.newsletter {
+  margin-top: 30px;
+  text-align: center;
+  z-index: 2; /* Ensure content is above background */
+}
+
+.newsletter h4 {
+  font-size: 1.8rem;
+  color: #d88f4e;
+  margin-bottom: 10px;
+}
+
+.newsletter p {
+  margin: 10px 0 20px;
+  font-size: 1rem;
+}
+
+.newsletter form {
+  display: flex;
+  justify-content: center;
+}
+
+.newsletter input[type="email"] {
+  padding: 12px;
+  border: 2px solid #d88f4e;
+  border-radius: 5px;
+  margin-right: 10px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.newsletter input[type="email"]:focus {
+  border-color: #5b3a29; /* Dark chocolate focus */
+}
+
+.newsletter button {
+  padding: 12px 20px;
+  border: none;
+  background-color: #d88f4e;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.newsletter button:hover {
+  background-color: #b57b3b; /* Darker shade on hover */
+  transform: scale(1.05);
+}

@@ -38,7 +38,7 @@ public class CustomerDao {
 
 	        // Send a welcome email
 	        String subject = "Successfully Registered!";
-	        String body = "Welcome to EpicReads, " + customer.getFullName() + "!";
+	        String body = "Welcome to cake bakes, " + customer.getFullName() + "!";
 	        try {
 	            emailUtil.sendEmail(customer.getEmailId(), subject, body);
 	        } catch (Exception e) {

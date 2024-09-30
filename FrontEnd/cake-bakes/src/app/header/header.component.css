@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fff; /* White background for a clean look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Deeper shadow for depth */
+    z-index: 10;
+}
+
+.header-1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px; /* Increased padding for a spacious feel */
+}
+
+.nav-part-1 {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 60px; /* Slightly larger logo */
+    border-radius: 50%;
+    margin-right: 15px; /* More space between logo and brand name */
+}
+
+.nav-Brand {
+    font-weight: bold;
+    font-size: 2rem; /* Larger font for the brand */
+    color: #333;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7);
+}
+
+.nav-part-2 {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.search-input {
+    width: 300px;
+    height: 45px; /* Increased height for better usability */
+    border: 1px solid #ccc;
+    border-radius: 25px; /* Rounded input */
+    padding: 0 20px; /* Inner padding */
+    font-size: 1rem;
+    transition: border 0.3s;
+}
+
+.search-input:focus {
+    border-color: #0082e6; /* Focus border color */
+    outline: none;
+}
+
+.search-button {
+    height: 45px; /* Match input height */
+    border: none;
+    border-radius: 25px; /* Rounded button */
+    background-color: #0082e6;
+    color: white;
+    font-weight: bold;
+    padding: 0 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-button:hover {
+    background-color: #005bb5; /* Darker button on hover */
+}
+
+.pout {
+    display: flex;
+    align-items: center;
+}
+
+.pout li {
+    margin: 0 20px; /* Increased margin for spacing */
+}
+
+.pout li a {
+    text-decoration: none;
+    color: #555;
+    padding: 10px 15px;
+    border-radius: 25px; /* Rounded links */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.pout li a:hover {
+    background-color: #e0e0e0; /* Subtle background on hover */
+    color: #000; /* Darker text on hover */
+}
+
+.nav-part-3 {
+    display: flex;
+    align-items: center;
+}
+
+.login, .cart {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    background-color: #f9f9f9; /* Light background for buttons */
+    border: 1px solid #ccc;
+    border-radius: 25px; /* Rounded buttons */
+    margin-left: 10px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.login:hover, .cart:hover {
+    background-color: #f0f0f0; /* Lighter background on hover */
+    border-color: #0082e6; /* Change border color on hover */
+}
+
+.header-2 {
+    background-color: #f8f8f8; /* Light grey background for admin menu */
+    padding: 10px 20px; /* Padding for admin menu */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.header-2 .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space items */
+}
+
+.header-2 .pout {
+    display: flex;
+}
+
+.header-2 .pout li {
+    margin: 0 15px; /* Spacing for admin links */
+}
+
+.header-2 .pout li a {
+    color: #333; /* Dark text for links */
+    padding: 10px 15px;
+    border-radius: 25px; /* Rounded links */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.header-2 .pout li a:hover {
+    background-color: #0082e6; /* Admin link hover effect */
+    color: white; /* White text on hover */
+}
+
+.checkbtn {
+    display: none; /* Hide checkbox by default */
+}
+
+.menu-icon {
+    width: 30px; /* Icon size */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .header-1 {
+        flex-direction: column; /* Stack elements on smaller screens */
+        align-items: flex-start; /* Align items to start */
+    }
+
+    .nav-part-2 {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .search-input {
+        width: calc(100% - 40px); /* Full width input */
+    }
+
+    .header-2 {
+        display: block; /* Show admin menu on mobile */
+    }
+
+    .header-2 .navbar {
+        flex-direction: column; /* Stack admin menu items */
+        align-items: flex-start; /* Align items to start */
+    }
+
+    .header-2 .pout {
+        flex-direction: column; /* Stack menu items */
+        width: 100%; /* Full width for dropdown */
+    }
+
+    .header-2 .pout li {
+        margin: 10px 0; /* Spacing for stacked items */
+    }
+
+    .checkbtn {
+        display: block; /* Show checkbox for mobile menu */
+        cursor: pointer; /* Pointer on hover */
+    }
+    
+    .header-2 .pout {
+        display: none; /* Initially hide admin menu */
+    }
+
+    #check:checked ~ .pout {
+        display: flex; /* Show menu when checked */
+        flex-direction: column; /* Stack vertically */
+    }
+}

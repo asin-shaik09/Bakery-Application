@@ -1,0 +1,55 @@
+
+<body>
+    
+
+<div class="container-1">
+    <form #product="ngForm" (ngSubmit)="addProduct(product.value)">
+        <!-- <div class="formGroup">
+            <label>Enter Product-ID : </label>
+            <input type="number" name="pId" ngModel>
+        </div> -->
+        <div class="formGroup">
+            <label >Enter Item Name : </label>
+            <input type="text" name="name" ngModel>
+        </div>
+       
+        <div class="formGroup">
+            <label>Enter Item Category : </label>
+            <!-- <input type="text" name="category" ngModel> -->
+            <select name="category" ngModel>
+                
+                <option value="" selected>Select Category</option>
+                <option value="cakes"  >cakes</option>
+                <option value="Muffins">cup cakes</option>
+                <option value="Breads">Breads</option>
+                <option value="Chocolates">Chocolates</option>
+                <option value="pastries"  >pastries</option>
+                <option value="cookies">cookies</option>
+                <option value="Macroons">Macroons</option>
+          
+            </select>
+        </div>
+        
+        <div class="formGroup">
+            <label >Enter Item Description : </label>
+            <input type="text" name="description" ngModel>
+        </div>
+        <div class="formGroup">
+            <label >Enter Item Image Source : </label>
+            <input type="text" name="imgsrc" ngModel>
+        </div>
+        <div class="formGroup">
+            <label >Enter Item Price : </label>
+            <input type="text" name="price" ngModel>
+        </div>
+        <div class="formGroup">
+            <label >Enter Item Quantity : </label>
+            <input type="number" name="quantity" ngModel>
+        </div>
+        <div class="formGroup">
+            <label ></label>
+            <button>ADD</button>
+        </div>
+    </form>
+</div>
+</body>
